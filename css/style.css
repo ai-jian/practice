@@ -1,0 +1,303 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: none;
+}
+
+html[data-theme="light"] {
+  --bg: rgb(236, 236, 236);
+  --bg-panel: #fafafa;
+  --color-headings: #e9709c;
+  --color-text: #4b4949;
+}
+
+html[data-theme="dark"] {
+  --bg:  #4b4949;
+  --bg-panel:  #f382ac;
+  --color-headings: rgb(250, 225, 225);
+  --color-text: #fafafa;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  position: absolute;
+  background-color: var(--bg-panel);
+  margin: 5rem;
+  padding: 5rem;
+  border-radius: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% auto;
+      grid-template-columns: 80% auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: "title toggle" "content content";
+}
+
+.container h1 {
+  color: var(--color-headings);
+}
+
+.container p {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+/* Switch 1 Specific Styles Start */
+.switch_1 {
+  font-size: 2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 1.5em;
+  height: 1em;
+  background: var(--bg);
+  border-radius: 3em;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.switch_1:checked {
+  background: var(--color-headings);
+}
+
+.switch_1:after {
+  position: absolute;
+  content: "";
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: var(--bg-panel);
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
+  -webkit-transform: scale(0.88);
+          transform: scale(0.88);
+  left: 0;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.switch_1:checked:after {
+  left: calc(100% - 1em);
+}
+
+html.transition * {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+}
+
+header .app__nav {
+  width: 100%;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .app__nav li {
+  list-style: none;
+  margin: 1rem;
+}
+
+header .app__nav li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-headings);
+  position: relative;
+  -webkit-transition: all 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+header .app__nav li a::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: 0%;
+  height: 2px;
+  width: 0%;
+  background-color: var(--color-headings);
+  -webkit-transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+header .app__nav li a:hover {
+  cursor: pointer;
+}
+
+header .app__nav li a:hover::after {
+  width: 100%;
+}
+
+header .app__nav .nav-logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+header .app__nav .nav-logo a:hover {
+  color: var(--color-headings);
+}
+
+header .app__nav .nav-logo a:hover::after {
+  width: 0;
+}
+
+.app__hero {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.app__hero .hero-text {
+  line-height: 1.5;
+  margin: 0 1rem;
+  color: var(--color-headings);
+}
+
+.app__hero .hero-text h1 {
+  font-size: 2rem;
+  padding: 1em 0;
+}
+
+.app__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.app__footer .footer-social {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app__footer .footer-social li {
+  list-style: none;
+  margin: 1rem;
+}
+
+.app__footer .footer-social li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-headings);
+  position: relative;
+  -webkit-transition: all 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.app__footer .footer-social li a::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: 0%;
+  height: 2px;
+  width: 0%;
+  background-color: var(--color-headings);
+  -webkit-transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.app__footer .footer-social li a:hover {
+  cursor: pointer;
+}
+
+.app__footer .footer-social li a:hover::after {
+  width: 100%;
+}
+
+.app__footer p {
+  font-weight: bold;
+  color: var(--color-headings);
+}
+
+.app__cursor, .cursor-follower {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 3px solid var(--color-headings);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  pointer-events: none;
+  z-index: 9999;
+  -webkit-transition-property: width, height;
+  transition-property: width, height;
+  -webkit-transition-duration: 0.35s;
+          transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.cursor-follower {
+  width: 70px;
+  height: 70px;
+}
+
+.cursor-grow, .grow-small {
+  width: 160px;
+  height: 160px;
+  background-color: blue;
+  mix-blend-mode: difference;
+  -webkit-filter: contrast(120%) brightness(120%);
+          filter: contrast(120%) brightness(120%);
+  border: none;
+}
+
+.grow-small {
+  width: 50px;
+  height: 50px;
+}
+/*# sourceMappingURL=style.css.map */

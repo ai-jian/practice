@@ -1,0 +1,60 @@
+// header navbar
+header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    // background-color: #f382ac;
+    .app__nav {
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        li {
+            list-style: none;
+            margin:1rem;
+            
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: var(--color-headings);
+                position: relative;
+                transition: all .35s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -20%;
+                    left: 0%;
+                    height:2px;
+                    width: 0%;
+                    background-color:var(--color-headings);
+                    transition: all .5s cubic-bezier(0.39, 0.575, 0.565, 1);
+                }
+                &:hover{
+                    cursor: pointer;
+            
+                    &::after{
+                        width: 100%;
+                       
+                    }
+                }
+            }
+        }
+
+        .nav-logo {
+            flex: 1;
+            font-weight: bold;
+            font-size:1.5rem;
+            a:hover {
+                color:var(--color-headings);
+                &::after {
+                    width: 0;
+                }
+            }
+        }
+        
+    }
+}

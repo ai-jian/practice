@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"
+      integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- light/dark mode -->
+    <div class="container">
+      <h1>Light / Dark Mode</h1>
+      <div class="toggle">
+        <input type="checkbox" class="switch_1" name="theme" />
+      </div>
+    </div>
+
+    <!-- cursor -->
+    <div class="app__cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- header -->
+    <header>
+      <nav>
+        <ul class="app__nav">
+          <li class="nav-logo app__cursor-scale cursor-small">
+            <a href="#">Logo</a>
+          </li>
+          <li class="app__cursor-scale cursor-small"><a href="#">Home</a></li>
+          <li class="app__cursor-scale cursor-small"><a href="#">About</a></li>
+          <li class="app__cursor-scale cursor-small">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main content -->
+    <main>
+      <!-- hero section -->
+      <section class="app__hero">
+        <div class="hero-text">
+          <h2 class="app__cursor-scale cursor-small">Hi there!</h2>
+          <h1 class="app__cursor-scale">I'm Ai Jian, a web developer!</h1>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="app__footer">
+      <ul class="footer-social app__cursor-scale cursor-small">
+        <li><a href="#"> Facebook </a></li>
+        <li><a href="#"> Instagram </a></li>
+        <li><a href="#"> Twitter </a></li>
+      </ul>
+      <p class="app__cursor-scale cursor-small">@Ai Jian 2022</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
