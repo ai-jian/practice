@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height:100vh;
+    width: 100vw;
+    background: linear-gradient(45deg,#a80101,rgb(247, 169, 150));
+    display: grid;
+    place-content: center;
+}
+
+.mushroom-container{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    position: relative;
+    top: 70%;
+    background-color: rgb(225, 189, 143);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.mushroom-head {
+    height: 70%;
+    width: 100%;
+    background-color:brown;
+    border-radius: 100% 100% 70% 70%;
+    z-index: 1;
+}
+.mushroom-body {
+    height: 70%;
+    width: 60%;
+    background-color:beige;
+    border-radius: 100% 100% 20% 20%;
+    position: absolute;
+    bottom: 0;
+}
+.mushroom-body .eyes{
+    height: 10%;
+    width: 100%;
+    background-color:pink;
+    position: absolute;
+    bottom: 0;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+
+}
+.eye{
+    height: 100%;
+    width: 40%;
+    background-color:#000;
+    border-radius: 40%;
+}
+
